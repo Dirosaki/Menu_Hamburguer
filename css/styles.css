@@ -26,13 +26,14 @@ body{
 
 .menu:hover{
     box-shadow: 0 0 0 8px aliceblue, 0 0 0 8px aliceblue;
+    
 }
 
 .hamburguer{
     display: block;
     background: black;
     width: 30px;
-    height: 2px;
+    height: 3px;
     position: relative;
     top: 29px;
     left: 15px;
@@ -65,6 +66,9 @@ input{
 
 input:checked ~ label .menu{
     box-shadow: 0 0 0 80vw aliceblue, 0 0 0 80vh aliceblue;
+    
+    
+    
 }
 
 input:checked ~ label .hamburguer{
@@ -103,5 +107,20 @@ a{
     font-size: 47px;
     text-decoration: none;
     margin-bottom: 40px;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-left: #81ecec 0.8px solid; 
+    border-radius: 20px; 
+    transition: .5s 10ms; 
+}
+
+a:hover{
+    transform: translate(15px);
+    border-radius: 20px;
+    border-top: rgba(0, 0, 0, 0.4) 0.8px solid;
+    border-right: rgba(0,0,0,0.4) 0.8px solid;
+    border-bottom: 0.8px solid rgba(0,0,0,0.4);
+    border-left: hidden;
 }
 
