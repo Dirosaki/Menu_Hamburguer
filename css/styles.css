@@ -1,13 +1,12 @@
-*,
-*::before,
-*::after{
+*{
     margin: 0%;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
-    background-color: #81ecec;
+    background-color: #E9C057;
     
 }
 
@@ -21,7 +20,7 @@ body{
     left: 25px;
     cursor: pointer;
     box-shadow: 0 0 0 0px aliceblue, 0 0 0 0px aliceblue;
-    transition: box-shadow 0.6s ease-in-out;
+    transition: box-shadow 0.7s ease-in-out;
 }
 
 .menu:hover{
@@ -67,8 +66,6 @@ input{
 input:checked ~ label .menu{
     box-shadow: 0 0 0 80vw aliceblue, 0 0 0 80vh aliceblue;
     
-    
-    
 }
 
 input:checked ~ label .hamburguer{
@@ -89,38 +86,65 @@ input:checked ~ label .hamburguer::after{
 
 input:checked ~ ul{
     opacity: 1;
+    visibility: visible;
 }
 
 ul{
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 20%;
     transform: translate(-50%, -50%);
     list-style: none;
     opacity: 0;
-    transition: .25s .25s ease-in-out;
+    transition: .2s .2s ease-in-out;
+    visibility: hidden;
 }
 
 a{
     display: block;
     color: black;
-    font-size: 47px;
+    font-size: 40px;
     text-decoration: none;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     text-align: center;
     padding-right: 10px;
     padding-left: 10px;
-    border-left: #81ecec 0.8px solid; 
-    border-radius: 20px; 
-    transition: .5s 10ms; 
+    border-left: #E9C057 1px solid; 
+    border-right: #E9C057 1px solid; 
+    border-bottom: #E9C057 1px solid;
+    border-radius: 50px; 
+    transition: .5s; 
 }
 
 a:hover{
     transform: translate(15px);
-    border-radius: 20px;
-    border-top: rgba(0, 0, 0, 0.4) 0.8px solid;
-    border-right: rgba(0,0,0,0.4) 0.8px solid;
-    border-bottom: 0.8px solid rgba(0,0,0,0.4);
-    border-left: hidden;
+    border-radius: 50px;
+    border-top: rgba(0,0,0,0.7) 1px solid;
+    border-right: rgba(0,0,0,0.7) 1px solid;
 }
 
+img{
+    width: 400px;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    opacity: 0;
+    transition: .25s .25s ease-in-out;
+    visibility: hidden;
+}
+
+input:checked ~ img{
+    opacity: 1;
+    visibility: visible;
+}
+
+.invisivel{
+    background-color: #E9C057;
+}
+
+.mostrando{
+    background-color: #E9C057;
+    background-image: url(../img/logo.png);
+    background-size: 40px;
+    background-repeat:repeat;
+}
