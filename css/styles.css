@@ -68,6 +68,7 @@ input:checked ~ label .menu{
     
 }
 
+
 input:checked ~ label .hamburguer{
     transform: rotate(45deg);
 
@@ -126,17 +127,18 @@ a:hover{
 .logo{
     width: 50px;
     position: fixed;
-    top: 10%;
-    left: 35%;
-    transition: .8s 0s ease;
+    top: 5%;
+    left: 30%;
+    transition: .8s 0s ease-in-out;
     opacity: 0;
 }
 .logo1{
     width: 400px;
     position: fixed;
     top: 10%;
-    left: 35%;
+    left: 45%;
     opacity: 1;
+    z-index: 99;
 }
 
 
@@ -171,7 +173,7 @@ a:hover{
     margin-right: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    border-right: 0.5px solid #E9C057;
+    border-right: 0.5px solid rgba(0,0,0,0.7);
     justify-content: center;
     align-items: center;
 }
@@ -193,7 +195,7 @@ a:hover{
     margin-left: 0;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    border-left: 0.5px solid #E9C057;
+    border-left: 0.5px solid rgba(0,0,0,0.7);
     background-image: url(../img/img1.jpg);
     background-position: center;
     background-size: cover;
@@ -204,9 +206,10 @@ a:hover{
 
 
 .container1 h3{
-    font-size: 22.5px;
+    font-size: 23px;
     width: 600px;
-    text-align: justify;;
+    text-align: justify;
+    text-justify: auto;
     opacity: 0;
     color: white;
     margin: 0;
@@ -232,7 +235,46 @@ a:hover{
 
 }
 
+.divlogin{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    background-image: url(../img/login.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0px aliceblue, 0 0 0 0px aliceblue;
+    transition: box-shadow 0.7s ease-in-out;
+}
 
+.divlogin1{
+        box-shadow: 0 0 0 8px aliceblue, 0 0 0 8px aliceblue;
+        
+}
+
+.divlogin2{
+        box-shadow: 0 0 0 80vw aliceblue, 0 0 0 80vh aliceblue;
+}
+
+.logo2{
+    width: 50px;
+    position: fixed;
+    top: 5%;
+    right: 30%;
+    transition: .8s 0s ease-in-out;
+    opacity: 0;
+}
+.logo3{
+    width: 400px;
+    position: fixed;
+    top: 10%;
+    right: 45%;
+    opacity: 1;
+    z-index: 99;
+}
 
 ::-webkit-scrollbar{
     width: 5px;
