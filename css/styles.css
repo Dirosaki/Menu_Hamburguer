@@ -84,11 +84,6 @@ input:checked ~ label .hamburguer::after{
     bottom: 0;
 }
 
-input:checked ~ ul{
-    opacity: 1;
-    visibility: visible;
-}
-
 ul{
     position: fixed;
     top: 50%;
@@ -96,8 +91,13 @@ ul{
     transform: translate(-50%, -50%);
     list-style: none;
     opacity: 0;
-    transition: .2s .2s ease-in-out;
+    transition: .6s .1s ease;
     visibility: hidden;
+}
+
+input:checked ~ ul{
+    opacity: 1;
+    visibility: visible;
 }
 
 a{
@@ -124,11 +124,11 @@ a:hover{
 }
 
 .logo{
-    width: 200px;
+    width: 50px;
     position: fixed;
     top: 10%;
     left: 35%;
-    transition: .0.2s 0s linear;
+    transition: .8s 0s ease;
     opacity: 0;
 }
 .logo1{
@@ -136,7 +136,6 @@ a:hover{
     position: fixed;
     top: 10%;
     left: 35%;
-    transition: .0.5s 1.5s linear;
     opacity: 1;
 }
 
@@ -150,9 +149,9 @@ a:hover{
     background-image: url(../img/logo.png);
     background-size: 40px;
     background-repeat:repeat;
-    animation: animation1 10s linear infinite alternate;
-    
+    animation: animation1 10s linear infinite alternate; 
 }
+
 .dirinho{
     width: 90%;
     height: 500px;
@@ -211,16 +210,16 @@ a:hover{
     opacity: 0;
     color: white;
     margin: 0;
+    transition: 0.8s 0s ease;
+    border: 1px solid rgba(0,0,0,0.7);
+    box-sizing: border-box;
+    padding: 120px;
 }
 
 .container1:hover h3{
     opacity: 1;
-    transition: 0.8s 0s ease;
     background-color: rgba(0,0,0,0.7);
-    box-sizing: border-box;
-    padding: 120px;
-    
-    
+    transform: translateY(-10px);    
 }
 
 .container3{
