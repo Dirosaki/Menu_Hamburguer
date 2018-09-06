@@ -10,6 +10,18 @@ body{
     
 }
 
+.invisivel{
+    background-color: #E9C057;
+}
+
+.mostrando{
+    background-color: #E9C057;
+    background-image: url(../img/logo.png);
+    background-size: 40px;
+    background-repeat:repeat;
+    animation: animation1 10s linear infinite alternate; 
+}
+
 .menu{
     background-color: aliceblue;
     border-radius: 50%;
@@ -23,8 +35,13 @@ body{
     transition: box-shadow 0.7s ease-in-out;
 }
 
-.menu:hover{
+.menu2{
     box-shadow: 0 0 0 8px aliceblue, 0 0 0 8px aliceblue;
+    
+}
+
+.menu3{
+    box-shadow: 0 0 0 80vw aliceblue, 0 0 0 80vh aliceblue;
     
 }
 
@@ -59,33 +76,23 @@ body{
     bottom: -10px;
 }
 
-input{
-    display: none;
-}
-
-input:checked ~ label .menu{
-    box-shadow: 0 0 0 80vw aliceblue, 0 0 0 80vh aliceblue;
-    
-}
-
-
-input:checked ~ label .hamburguer{
+.hamburguer2{
     transform: rotate(45deg);
 
 }
 
-input:checked ~ label .hamburguer::before{
+.hamburguer2::before{
     transform: rotate(90deg);
     top: 0;
 
 }
 
-input:checked ~ label .hamburguer::after{
+.hamburguer2::after{
     transform: rotate(90deg);
     bottom: 0;
 }
 
-ul{
+.ulInvisible{
     position: fixed;
     top: 50%;
     left: 20%;
@@ -96,7 +103,14 @@ ul{
     visibility: hidden;
 }
 
-input:checked ~ ul{
+.ulVisible{
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    opacity: 0;
+    transition: .6s .1s ease;
     opacity: 1;
     visibility: visible;
 }
@@ -132,6 +146,7 @@ a:hover{
     transition: .8s 0s ease-in-out;
     opacity: 0;
 }
+
 .logo1{
     width: 400px;
     position: fixed;
@@ -141,20 +156,7 @@ a:hover{
     z-index: 99;
 }
 
-
-.invisivel{
-    background-color: #E9C057;
-}
-
-.mostrando{
-    background-color: #E9C057;
-    background-image: url(../img/logo.png);
-    background-size: 40px;
-    background-repeat:repeat;
-    animation: animation1 10s linear infinite alternate; 
-}
-
-.dirinho{
+.conteudo{
     width: 90%;
     height: 500px;
     display: flex;
@@ -204,7 +206,6 @@ a:hover{
     overflow: hidden;
 }
 
-
 .container1 h3{
     font-size: 23px;
     width: 600px;
@@ -235,47 +236,102 @@ a:hover{
 
 }
 
-.divlogin{
-    position: fixed;
-    width: 60px;
+.contain{
+    position: absolute;
     height: 60px;
+    width: 80%;
+    margin: auto;
+    left: 0;
+    right: 0;
     top: 25px;
-    right: 25px;
-    cursor: pointer;
-    background-image: url(../img/login.png);
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
-    box-shadow: 0 0 0 0px aliceblue, 0 0 0 0px aliceblue;
-    transition: box-shadow 0.7s ease-in-out;
+}
+.pai{
+    width: 600px;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    
 }
 
-.divlogin1{
-        box-shadow: 0 0 0 8px aliceblue, 0 0 0 8px aliceblue;
-        
+.divlogin{
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    cursor: pointer;
+    background-color: aliceblue;
+    background-image: url(../img/login.png);
+    background-position: center;
+    background-size: 110%;
+    border-radius: 50%;
+    transition:0.8s ease-in-out;
+    box-shadow: 0 0 0 1px aliceblue;
+}
+
+.divlogin:hover{
+    transform: scale(1.3);
 }
 
 .divlogin2{
-        box-shadow: 0 0 0 80vw aliceblue, 0 0 0 80vh aliceblue;
+    left: 90%;
 }
 
-.logo2{
-    width: 50px;
-    position: fixed;
-    top: 5%;
-    right: 30%;
-    transition: .8s 0s ease-in-out;
-    opacity: 0;
-}
-.logo3{
-    width: 400px;
-    position: fixed;
-    top: 10%;
-    right: 45%;
-    opacity: 1;
-    z-index: 99;
+.divlogin3{
+    left: 0;
 }
 
+.login{
+    width: 100%;
+    height: 100%;
+    top: 25px;
+    right: 25px;
+    border-radius: 500px;
+    background-color: rgba(0,0,0,0.3);
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.inputL{
+    width: 38%;
+    height: 50%;
+    border-radius: 50px;
+    border: none;
+    margin-right: 12px;   
+    outline: none;
+    text-align: center;
+    font-size: 16pt; 
+     
+}
+
+
+.buttonOk{
+    display: flex;
+    width: 45px;
+    height: 45px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    margin-right: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: 1s ease-in-out;
+}
+
+.buttonOk:hover{
+    width: 60px;
+    height: 60px;
+    margin: 0;
+}
+
+.buttonOk>p{
+    font-size: 12pt;
+    font-weight: 600;
+}
+.buttonOk>p:hover{
+    font-size: 18pt;
+    font-weight: 600;
+}
 ::-webkit-scrollbar{
     width: 5px;
     background-color: black;
