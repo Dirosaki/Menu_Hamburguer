@@ -1,6 +1,5 @@
-# Menu_Hamburguer
-Menu Hambúrguer Full CSS  
-## dirosaki.github.io/Menu_Hamburguer
+# Menu_Hamburguer  
 
-Site criado para o Demoday 5.
+## http://dirosaki.github.io/Menu_Hamburguer
+
     
